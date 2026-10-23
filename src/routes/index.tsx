@@ -40,7 +40,7 @@ function App() {
   const [area, setArea] = useState("");
   const [job, setJob] = useState("");
   const [resume, setResume] = useState("");
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<{ opp?: string; job?: string; resume?: string }>({});
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [optimized, setOptimized] = useState("");
   const [notice, setNotice] = useState("");
@@ -50,7 +50,7 @@ function App() {
     setOpp(""); setArea(""); setJob(""); setResume(""); setErrors({}); setResult(null); setOptimized(""); setNotice("");
   };
   const submit = () => {
-    const e: Record<string, string> = { ...validate(job, resume) };
+    const e: { opp?: string; job?: string; resume?: string } = { ...validate(job, resume) };
     if (!opp) e.opp = "Selecione o tipo de oportunidade.";
     setErrors(e);
     if (Object.keys(e).length) return;
@@ -245,7 +245,7 @@ function Home({ onStart }: { onStart: () => void }) {
   );
 }
 
-function Field(p: { id: string; label: string; value: string; onChange: (v: string) => void; error?: string; placeholder: string; rows?: number }) {
+function Field(p: { id: string; label: string; value: string; onChange: (v: string) => void; error?: string | undefined; placeholder: string; rows?: number }) {
   return (
     <div>
       <div className="flex justify-between">
@@ -260,7 +260,7 @@ function Field(p: { id: string; label: string; value: string; onChange: (v: stri
   );
 }
 
-function Err({ msg, id }: { msg: string; id?: string }) {
+function Err({ msg, id }: { msg: string; id?: string | undefined }) {
   return <p id={id} role="alert" className="mt-1 flex items-center gap-1 text-sm font-medium text-destructive"><AlertTriangle className="h-4 w-4" aria-hidden /> {msg}</p>;
 }
 
