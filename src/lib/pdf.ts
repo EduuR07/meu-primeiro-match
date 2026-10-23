@@ -1,5 +1,4 @@
 import { jsPDF } from "jspdf";
-import { normalize } from "./ats";
 
 export function exportResumePdf(text: string, filename = "curriculo-meuprimeiromatch.pdf") {
   const doc = new jsPDF({ unit: "mm", format: "a4" });
@@ -20,6 +19,5 @@ export function exportResumePdf(text: string, filename = "curriculo-meuprimeirom
       y += isTitle ? 6.5 : 5.2;
     }
   }
-  void normalize;
   doc.save(filename);
 }
