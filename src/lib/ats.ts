@@ -57,7 +57,7 @@ export function analyze(job: string, resume: string): AnalysisResult {
   if (/projeto/.test(r)) rec.push("Seu currículo apresenta projetos. Considere destacá-los em uma seção própria, como “Projetos acadêmicos”.");
   else rec.push("Se você participou de projetos acadêmicos, voluntários ou pessoais, eles podem valorizar seu currículo.");
   if (!/(formacao|escolaridade|ensino|graduacao|faculdade)/.test(r)) rec.push("Não identificamos uma seção de formação acadêmica. Organize sua escolaridade para facilitar a leitura.");
-  if (!/(@|telefone|celular|whatsapp|linkedin)/.test(r)) rec.push("Não encontramos dados de contato (e-mail, telefone ou LinkedIn). Inclua-os no topo do currículo.");
+  if (!/(@|telefone|celular|whatsapp|linkedin|\(\d{2}\))/i.test(resume)) rec.push("Não encontramos dados de contato (e-mail, telefone ou LinkedIn). Inclua-os no topo do currículo.");
   if (!/(objetivo)/.test(r)) rec.push("Considere incluir um objetivo profissional curto, alinhado à vaga.");
   if (found.length) rec.push(`Mantenha em destaque as competências já alinhadas à vaga: ${found.slice(0, 5).join(", ")}.`);
   rec.push("Utilize títulos claros para as seções do currículo.");
