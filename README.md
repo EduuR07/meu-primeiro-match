@@ -204,31 +204,34 @@ As capturas abaixo devem demonstrar as principais etapas da aplicação.
 
 Interface de apresentação do MeuPrimeiroMatch, com a proposta da plataforma e acesso à análise.
 
-<!-- Adicionar captura da página inicial aqui. -->
+<img width="1900" height="913" alt="pagina-inicial" src="https://github.com/user-attachments/assets/44004677-ce95-473a-be66-ce308b14c4e0" />
+
 
 ### Formulário de análise
 
 Tela utilizada para informar a descrição da vaga e o currículo.
 
-<!-- Adicionar captura do formulário aqui. -->
+<img width="1901" height="915" alt="formulario" src="https://github.com/user-attachments/assets/c849264f-078d-4f1b-b194-ffbd8d85e8c0" />
+
 
 ### Resultado da análise
 
 Visualização da pontuação estimada, das competências identificadas e das recomendações.
 
-<!-- Adicionar captura dos resultados aqui. -->
+<img width="1906" height="913" alt="resultados" src="https://github.com/user-attachments/assets/a4eb12c8-ef6e-4d89-bee9-1c0e78d1e929" />
 
 ### Currículo reorganizado
 
 Etapa de revisão e edição do currículo antes da exportação.
 
-<!-- Adicionar captura do editor aqui. -->
+<img width="1918" height="918" alt="curriculo" src="https://github.com/user-attachments/assets/db32681a-a9b4-4462-98ac-d5bb3020770f" />
 
 ### PDF exportado
 
 Exemplo de currículo gerado pela aplicação.
 
-<!-- Adicionar captura do PDF aqui. -->
+<img width="611" height="856" alt="pdf" src="https://github.com/user-attachments/assets/05f6b4e8-b642-43a9-b4b4-b052a74b3376" />
+
 
 ## 10. Executar o projeto localmente
 
